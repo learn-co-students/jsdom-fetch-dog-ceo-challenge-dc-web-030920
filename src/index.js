@@ -39,7 +39,7 @@ function fetchImages() {
 
 function rickRoll( ){   
     let divNode = document.getElementById("dog-image-container")
-    divNode.innerHTML = '<iframe width="420" height="345" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+    divNode.innerHTML = '<iframe src="https://giphy.com/embed/lgcUUCXgC8mEo" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>'
 }
 
 
