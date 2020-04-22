@@ -39,10 +39,14 @@ function fetchImages() {
 
 function rickRoll( ){   
     let divNode = document.getElementById("dog-image-container")
+<<<<<<< HEAD
     divNode.innerHTML = `<video width="100%" height="100%" loop autoplay controls>
     <source src="http://rickrollomatic.com/rickroll.mp4" type="video/mp4">
   Your browser does not support the video tag.    <!--...Peasant.-->
   </video>`
+=======
+    divNode.innerHTML = '<iframe src="https://giphy.com/embed/lgcUUCXgC8mEo" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>'
+>>>>>>> 5f8766e04022c06af4a698e2dc83db3bf5626039
 }
 
 
