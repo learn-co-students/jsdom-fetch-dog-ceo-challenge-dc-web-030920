@@ -45,10 +45,12 @@ function renderBreeds(json){
         array.push(breed); 
 
     }
-    filteredArray = [];
+    // filteredArray = [];
     array.forEach(breed => {
+
         if (breed.startsWith(document.querySelector('select').value)){
             let li = document.createElement('li')
+       
             li.innerHTML = breed
             ul.appendChild(li)
         }
