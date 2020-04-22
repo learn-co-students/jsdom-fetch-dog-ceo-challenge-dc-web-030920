@@ -4,20 +4,19 @@ document.addEventListener("DOMContentLoaded", function(){
 fetchImages()
 fetchBreeds()
 createAlphabet()
+let rickNode = document.getElementById("goodtimes")
+rickNode.onclick = rickRoll
 let dropDownNode = document.getElementById("breed-dropdown")
 // dropDownNode.addEventListener("change", handleDropDown)
 dropDownNode.onchange = handleDropDown;
 let shuffleDogsNode = document.getElementById("reshuffle")
 let dogImageNode = document.getElementById("dog-image-container")
-    shuffleDogsNode.onclick = () =>  { 
+shuffleDogsNode.onclick = () =>  { 
     dogImageNode.innerHTML = "" 
     fetchImages();
-    }
-
+    }  
 }
 )
-//97-122
-// id="breed-dropdown"
 
 function createAlphabet(){
     let dropDown = document.querySelector("#breed-dropdown")
@@ -36,6 +35,11 @@ function fetchImages() {
     // fetch (url )
     data.message.forEach( dogImage => createImg(dogImage))
     })
+}
+
+function rickRoll( ){   
+    let divNode = document.getElementById("dog-image-container")
+    divNode.innerHTML = '<iframe width="420" height="345" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
 }
 
 
