@@ -30,8 +30,11 @@ console.log('%c HI', 'color: firebrick')
 document.addEventListener("DOMContentLoaded", function () {
   // fetchDogs()
   fetchBreeds()
-  // document.addEventListener("click", function(){})
+
+  // document.addEventListener("click", changeColor())
+
 })
+
 
 // const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
 
@@ -71,4 +74,5 @@ function renderBreeds(message) {
   let li = document.createElement("li")
   div.appendChild(li)
   li.innerText = message
+  li.onclick = () => li.style.color = "blue"      //challenge 3
 }
