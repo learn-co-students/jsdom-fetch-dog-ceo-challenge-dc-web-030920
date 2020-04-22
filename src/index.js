@@ -27,10 +27,22 @@ console.log('%c HI', 'color: firebrick')
 // When the user clicks any of the dog breed list items, the color the text should change.
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  // fetchDogs()
-  fetchBreeds()
+// Challenge 4
+// Once we are able to load all of the dog breeds onto the page, 
+// add JavaScript so that the user can filter breeds that start with a particular letter using a dropdown.
 
+// For example, if the user selects 'a' in the dropdown, only show the breeds with names that start with the letter a. 
+// For simplicity, the dropdown only includes the letters a-d. However, we can imagine expanding this to include the entire alphabet
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetchDogs()
+  fetchBreeds()
+  // let select = document.getElementById("breed-dropdown")
+  // select.onchange = () => breedName()
+
+  let dropDownNode = document.getElementById("breed-dropdown")
+  dropDownNode.onchange = handleDropDown;
   // document.addEventListener("click", changeColor())
 
 })
@@ -76,3 +88,28 @@ function renderBreeds(message) {
   li.innerText = message
   li.onclick = () => li.style.color = "blue"      //challenge 3
 }
+
+// challenge3
+// function breedName() {
+//   let li = document.querySelectorAll("li")
+//   li.forEach(function breed(breedname) {
+//     if (li.innerText[0] === "a") {
+//       breedname
+//     }
+//   })
+
+// }
+function handleDropDown(event) {
+  console.log(event.target)
+  let ulNode = document.getElementById("dog-breeds")
+  let liNodeList = ulNode.querySelectorAll("li")
+  liNodeList.forEach(li => {
+    if (li.innerText[0] !== event.target.value) {
+      li.hidden = true
+    }
+    else if (li.innerText[0] === this.value) {
+      li.hidden = false
+    }
+  })
+}
+// favorite list 
