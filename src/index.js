@@ -105,6 +105,8 @@ function changeColor(event){
     }
 }
 
+
+
 function handleDropDown(event) {
     console.log(event.target)
     let ulNode = document.getElementById("dog-breeds")
