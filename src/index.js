@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // select.onchange = () => breedName()
 
   let dropDownNode = document.getElementById("breed-dropdown")
+
   dropDownNode.onchange = handleDropDown;
   // document.addEventListener("click", changeColor())
 
@@ -55,7 +56,9 @@ function fetchDogs() {
   fetch("https://dog.ceo/api/breeds/image/random/4")
     .then(response => response.json())
     .then(dogArray => {
+      
       dogArray.message.forEach(dog => renderDog(dog))
+      debugger
     })
 }
 
@@ -112,4 +115,4 @@ function handleDropDown(event) {
     }
   })
 }
-// favorite list 
+// favorite list
