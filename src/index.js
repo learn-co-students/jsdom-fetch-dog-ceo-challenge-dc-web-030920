@@ -62,6 +62,9 @@ function selectBreed(event){
 }
 
 
+
+
+
 // for(i = 0; i< myBreed.length; i++){
 //     myBreed[i].addEventListener("click", selectItem);
 // }
